@@ -1,0 +1,36 @@
+{
+  "name": "@m8e/puppeter-browser",
+  "version": "0.1.0",
+  "description": "🌐 Puppeteer browser setup abstraction",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "files": [
+    "index.js",
+    "index.d.ts"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "test": "npm run build && ava",
+    "prepublish": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/MisumiRize/puppeter-browser.git"
+  },
+  "keywords": [],
+  "author": "Rize MISUMI",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/MisumiRize/puppeter-browser/issues"
+  },
+  "homepage": "https://github.com/MisumiRize/puppeter-browser#readme",
+  "dependencies": {
+    "@types/puppeteer": "^1.6.3"
+  },
+  "devDependencies": {
+    "@types/npm": "^2.0.29",
+    "ava": "^0.25.0",
+    "npm": "^6.4.1",
+    "typescript": "^3.0.3"
+  }
+}
