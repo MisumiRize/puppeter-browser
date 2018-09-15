@@ -11,7 +11,7 @@
   "scripts": {
     "build": "tsc",
     "test": "npm run build && ava",
-    "prepublish": "npm run build"
+    "prepublish": "git checkout HEAD -- . && npm run build"
   },
   "repository": {
     "type": "git",
