@@ -74,12 +74,20 @@ export default async (
       browserWSEndpoint: (await cdp.Version()).webSocketDebuggerUrl
     })
     kill = async () => {
+      const pages = await browser.pages()
+      for (let i = 0; i < pages.length; i++) {
+        await pages[i].close()
+      }
       await browser.close()
       await chrome.kill()
     }
   } else {
     browser = await puppeteer.launch(puppeteerOptions)
     kill = async () => {
+      const pages = await browser.pages()
+      for (let i = 0; i < pages.length; i++) {
+        await pages[i].close()
+      }
       await browser.close()
     }
   } 

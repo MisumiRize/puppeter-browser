@@ -46,7 +46,9 @@ test.serial(t => {
   }
 })
 
-process.env.PUPPETEER_SKIP_CHROMIUM_DOWNLOAD = 'true'
+if (process.env.CI == null) {
+  process.env.PUPPETEER_SKIP_CHROMIUM_DOWNLOAD = 'true'
+}
 
 test.serial(async t => {
   await npmInstall('puppeteer')

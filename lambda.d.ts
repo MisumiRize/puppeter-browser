@@ -20,5 +20,6 @@ declare module '@serverless-chrome/lambda' {
     kill(): Promise<void>
   }
 
-  export default function launch (options?: ILaunchOptions): IChrome
+  const _launch: (options?: ILaunchOptions) => IChrome
+  export default _launch
 }

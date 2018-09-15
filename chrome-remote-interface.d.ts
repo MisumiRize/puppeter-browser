@@ -3,5 +3,5 @@ declare module 'chrome-remote-interface' {
     webSocketDebuggerUrl: string
   }
 
-  export function Version (): Promise<IVersion>
+  export const Version: () => Promise<IVersion>
 }
